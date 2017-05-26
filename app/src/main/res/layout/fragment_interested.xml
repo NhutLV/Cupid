@@ -1,0 +1,71 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <!-- activity view -->
+    <FrameLayout
+        android:id="@+id/framLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_above="@+id/llfloatbutton"
+        android:layout_marginTop="10dp">
+        <com.signatic.tindercard.SwipeFlingAdapterView
+            android:id="@+id/frame_interested"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="left|center_vertical"
+            app:rotation_degrees="15.5"/>
+
+    </FrameLayout>
+    <LinearLayout
+        android:id="@+id/llfloatbutton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorWhite"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        android:weightSum="6">
+
+        <Button
+            android:id="@+id/btn_interested_next"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/margin_button_detail"
+            android:layout_weight="1"
+            android:background="@drawable/btn_back"/>
+
+        <Button
+            android:id="@+id/btn_interested_like"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/margin_button_detail"
+            android:layout_weight="1.5"
+            android:background="@drawable/btn_favorites"/>
+
+        <Button
+            android:id="@+id/btn_interested_nope"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/margin_button_detail"
+            android:layout_weight="1.5"
+            android:background="@drawable/btn_delete"/>
+
+        <Button
+            android:id="@+id/btn_interested_loaction"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/margin_button_detail"
+            android:layout_weight="1"
+            android:background="@drawable/btn_location"/>
+    </LinearLayout>
+
+</RelativeLayout>

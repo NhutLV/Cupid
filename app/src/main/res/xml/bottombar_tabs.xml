@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<tabs>
+    <tab
+        id="@+id/tab_friend"
+        icon="@drawable/add_friend"
+        title="Friends"
+        />
+    <tab
+        id="@+id/tab_messages"
+        icon="@drawable/speech_bubble"
+        title="Message"
+        />
+    <tab
+        id="@+id/tab_store"
+        icon="@drawable/shopping_cart"
+        title="Store"
+        />
+
+    <!-- You can use @color resources too! -->
+</tabs>
+

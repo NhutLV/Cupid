@@ -1,0 +1,34 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Dec 30, 17:06 AM"
+        android:textColor="@color/title_chat"
+        android:textSize="22sp"/>
+    <TextView
+        android:id="@+id/message_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:background="@drawable/in_message_bg"
+        android:layout_margin="5dp"
+        android:shadowDx="1"
+        android:shadowDy="1"
+        android:textColor="@color/text_chat_right"
+        android:textSize="22sp"/>
+    <ImageView
+        android:id="@+id/sendimage"
+        android:layout_gravity="right"
+        android:maxWidth="250dp"
+        android:adjustViewBounds="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"/>
+</LinearLayout>

@@ -1,0 +1,975 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/background_toolbar"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar_profile"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@android:color/transparent"
+            android:minHeight="?attr/actionBarSize"
+            app:layout_collapseMode="pin"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Dark">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/back_profile"
+                    style="@style/MyTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/cancel"
+                    android:textColor="@color/color_app"
+                    android:textSize="@dimen/profile_text_size_toolbar"/>
+
+                <TextView
+                    style="@style/MyTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:text="@string/profile_setting_text"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/profile_text_size_toolbar"/>
+
+                <TextView
+                    android:id="@+id/edit_profile"
+                    style="@style/MyTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="@dimen/activity_vertical_margin"
+                    android:text="@string/edit"
+                    android:textColor="@color/color_app"
+                    android:textSize="@dimen/profile_text_size_toolbar"/>
+            </RelativeLayout>
+        </android.support.v7.widget.Toolbar>
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/background_limit_button"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="330dp"
+                android:background="@color/colorWhite"
+                android:fitsSystemWindows="true"
+                android:focusable="true"
+                android:focusableInTouchMode="true">
+
+                <RelativeLayout
+                    android:id="@+id/img_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp"
+                    android:background="@drawable/transparency">
+
+                    <ImageView
+                        android:id="@+id/profile_image_cover"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:adjustViewBounds="true"
+                        android:scaleType="centerCrop"/>
+
+                    <ImageView
+                        android:id="@+id/profile_edit_cover"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginRight="@dimen/activity_horizontal_margin"
+                        android:layout_marginTop="@dimen/activity_horizontal_margin"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/ic_add_a_photo"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/profile_image_avatar"
+                        android:layout_width="140dp"
+                        android:layout_height="140dp"
+                        android:layout_alignParentBottom="true"
+                        android:paddingBottom="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:src="@drawable/image"
+                        app:civ_border_color="#ffffff"
+                        app:civ_border_width="4dp"/>
+
+                    <ImageView
+                        android:id="@+id/profile_edit_image"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignBottom="@+id/profile_image_avatar"
+                        android:layout_alignRight="@+id/profile_image_avatar"
+                        android:layout_marginBottom="60dp"
+                        android:layout_marginRight="20dp"
+                        android:src="@drawable/ic_edit_image"/>
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:layout_below="@+id/img_layout"
+                    android:weightSum="2">
+
+                    <TextView
+                        style="@style/MyTextView"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"/>
+
+                    <EditText
+                        android:id="@+id/name_profile"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="10dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/transparent"
+                        android:imeOptions="actionNext"
+                        android:singleLine="true"
+                        android:textColor="@color/colorBlack"
+                        android:textColorLink="@color/colorBlack"/>
+                </LinearLayout>
+            </RelativeLayout>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="@color/colorWhite">
+
+                <EditText
+                    android:id="@+id/status_profile"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:imeOptions="actionNext"
+                    android:lines="2"
+                    android:nextFocusDown="@+id/et_profile_snapchat"
+                    android:padding="@dimen/activity_vertical_margin"
+                    android:selectAllOnFocus="true"
+                    android:text="@string/status_current"
+                    android:textColorHint="@color/colorBlack"/>
+            </android.support.v7.widget.CardView>
+
+            <RelativeLayout
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorWhite"
+                android:padding="@dimen/profile_padding">
+
+                <TextView
+                    android:id="@+id/txt_tags_profile"
+                    style="@style/MyTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="@dimen/profile_margin_left_item_basic"
+                    android:text="@string/profile_tags"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/profile_text_size"/>
+
+                <Button
+                    android:id="@+id/bt_profile_tags"
+                    android:layout_width="@dimen/profile_size_button"
+                    android:layout_height="@dimen/profile_size_button"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:background="@drawable/ic_navigate_next_black"
+                    android:paddingRight="@dimen/profile_margin"/>
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/content_tag"
+                    android:layout_width="match_parent"
+                    android:layout_height="75dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_below="@+id/bt_profile_tags"
+                    android:layout_marginTop="5dp">
+
+                    <android.support.v4.widget.NestedScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <com.cunoraz.tagview.TagView
+                            android:id="@+id/tag_view_content_profile"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp">
+                        </com.cunoraz.tagview.TagView>
+                    </android.support.v4.widget.NestedScrollView>
+                </android.support.v7.widget.CardView>
+            </RelativeLayout>
+
+            <!--basic info-->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/background_toolbar"
+                android:paddingBottom="@dimen/profile_padding_toolbar"
+                android:paddingLeft="@dimen/activity_vertical_margin"
+                android:paddingTop="@dimen/profile_padding_top_title"
+                android:text="@string/profile_title_basic"
+                android:textAllCaps="true"
+                android:textStyle="bold"/>
+
+            <RelativeLayout
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorWhite"
+                android:paddingBottom="@dimen/profile_padding"
+                android:paddingTop="@dimen/profile_padding">
+
+                <Spinner
+                    android:id="@+id/spinner_gender"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"/>
+
+                <TextView
+                    style="@style/MyTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="@dimen/profile_margin"
+                    android:text="@string/profile_gender"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/profile_text_size"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorWhite">
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/filter_height_age"
+                    android:layout_below="@+id/txt_age_profile"
+                    android:layout_marginTop="@dimen/margin_editText_bottom"
+                    android:background="@color/background_toolbar">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/filter_padding_age"
+                        android:src="@drawable/custom_img_picker"/>
+
+                    <com.signatic.library.horizontalpicker.HorizontalPicker
+                        android:id="@+id/picker_age_profile"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
+                        android:marqueeRepeatLimit="2"
+                        android:paddingBottom="@dimen/activity_vertical_margin"
+                        android:paddingTop="@dimen/activity_vertical_margin"
+                        android:textColor="@drawable/custom_text_color_picker"
+                        android:textSize="@dimen/filter_text_size"
+                        app:dividerSize="@dimen/filter_divider"
+                        app:sideItems="@integer/numSideItemsAgeRange"
+                        app:values="@array/values_age"/>
+                </FrameLayout>
+
+                <TextView
+                    android:id="@+id/txt_age_profile"
+                    style="@style/MyTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="@dimen/profile_margin"
+                    android:text="@string/profile_age"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/profile_text_size"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorWhite"
+                android:paddingBottom="@dimen/profile_padding"
+                android:paddingTop="@dimen/profile_padding">
+
+                <Spinner
+                    android:id="@+id/spinner_interested"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"/>
+
+                <TextView
+                    style="@style/MyTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="@dimen/profile_margin"
+                    android:text="@string/profile_interested"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/profile_text_size"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorWhite"
+                android:paddingBottom="@dimen/profile_padding"
+                android:paddingTop="@dimen/profile_padding">
+
+                <EditText
+                    android:id="@+id/et_profile_displayname"
+                    style="@style/MyStyleEditText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:imeOptions="actionNext"
+                    android:singleLine="true"/>
+
+                <TextView
+                    style="@style/MyTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="@dimen/profile_margin"
+                    android:text="@string/profile_display_name"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/profile_text_size"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorWhite"
+                android:paddingBottom="@dimen/profile_padding"
+                android:paddingTop="@dimen/profile_padding">
+
+                <Spinner
+                    android:id="@+id/spinner_i_am_here_to"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"/>
+
+                <TextView
+                    style="@style/MyTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="@dimen/profile_margin"
+                    android:text="@string/i_am_here_to"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/profile_text_size"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorWhite"
+                android:paddingBottom="@dimen/profile_padding"
+                android:paddingTop="@dimen/profile_padding">
+
+                <Spinner
+                    android:id="@+id/spinner_relationship"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"/>
+
+                <TextView
+                    style="@style/MyTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="@dimen/profile_margin"
+                    android:text="@string/relationship"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/profile_text_size"/>
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorWhite"
+                android:paddingBottom="@dimen/profile_padding"
+                android:paddingTop="@dimen/profile_padding">
+
+                <Spinner
+                    android:id="@+id/spinner_drinking"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"/>
+
+                <TextView
+                    style="@style/MyTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="@dimen/profile_margin"
+                    android:text="@string/drinking"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/profile_text_size"/>
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorWhite"
+                android:paddingBottom="@dimen/profile_padding"
+                android:paddingTop="@dimen/profile_padding">
+
+                <Spinner
+                    android:id="@+id/spinner_smoking"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"/>
+
+                <TextView
+                    style="@style/MyTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="@dimen/profile_margin"
+                    android:text="@string/smoking"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/profile_text_size"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorWhite"
+                android:paddingBottom="@dimen/profile_padding"
+                android:paddingTop="@dimen/profile_padding">
+
+                <Spinner
+                    android:id="@+id/spinner_living"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"/>
+
+                <TextView
+                    style="@style/MyTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="@dimen/profile_margin"
+                    android:text="@string/living"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/profile_text_size"/>
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorWhite"
+                android:paddingBottom="@dimen/profile_padding"
+                android:paddingTop="@dimen/profile_padding">
+
+                <Spinner
+                    android:id="@+id/spinner_kids"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"/>
+
+                <TextView
+                    style="@style/MyTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="@dimen/profile_margin"
+                    android:text="@string/kids"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/profile_text_size"/>
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorWhite"
+                android:paddingBottom="@dimen/profile_padding"
+                android:paddingTop="@dimen/profile_padding">
+
+                <Spinner
+                    android:id="@+id/spinner_education"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"/>
+
+                <TextView
+                    style="@style/MyTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="@dimen/profile_margin"
+                    android:text="@string/education"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/profile_text_size"/>
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorWhite"
+                android:paddingBottom="@dimen/profile_padding"
+                android:paddingTop="@dimen/profile_padding">
+
+                <EditText
+                    android:id="@+id/et_profile_job"
+                    style="@style/MyStyleEditText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:imeOptions="actionNext"
+                    android:singleLine="true"/>
+
+                <TextView
+                    style="@style/MyTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="@dimen/profile_margin"
+                    android:text="@string/job"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/profile_text_size"/>
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorWhite"
+                android:paddingBottom="@dimen/profile_padding"
+                android:paddingTop="@dimen/profile_padding">
+
+                <EditText
+                    android:id="@+id/et_profile_company"
+                    style="@style/MyStyleEditText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:imeOptions="actionNext"
+                    android:singleLine="true"/>
+
+                <TextView
+                    style="@style/MyTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="@dimen/profile_margin"
+                    android:text="@string/company"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/profile_text_size"/>
+            </RelativeLayout>
+
+
+            <!--end-->
+
+            <!--contact-->
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/background_toolbar"
+                android:paddingBottom="@dimen/profile_padding_toolbar"
+                android:paddingLeft="@dimen/activity_vertical_margin"
+                android:paddingTop="@dimen/profile_padding_top_title"
+                android:text="@string/contact"
+                android:textAllCaps="true"
+                android:textStyle="bold"/>
+
+            <RelativeLayout
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorWhite"
+                android:paddingBottom="@dimen/profile_padding"
+                android:paddingTop="@dimen/profile_padding">
+
+                <EditText
+                    android:id="@+id/et_profile_snapchat"
+                    style="@style/MyStyleEditText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:imeOptions="actionNext"
+                    android:singleLine="true"/>
+
+                <TextView
+                    style="@style/MyTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="@dimen/profile_margin"
+                    android:text="@string/profile_snapchat"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/profile_text_size"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorWhite"
+                android:paddingBottom="@dimen/profile_padding"
+                android:paddingTop="@dimen/profile_padding">
+
+                <EditText
+                    android:id="@+id/et_profile_kik"
+                    style="@style/MyStyleEditText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:imeOptions="actionNext"
+                    android:singleLine="true"/>
+
+                <TextView
+                    style="@style/MyTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="@dimen/profile_margin"
+                    android:text="@string/profile_kik"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/profile_text_size"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorWhite"
+                android:paddingBottom="@dimen/profile_padding"
+                android:paddingTop="@dimen/profile_padding">
+
+                <EditText
+                    android:id="@+id/et_profile_instagram"
+                    style="@style/MyStyleEditText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:imeOptions="actionNext"
+                    android:singleLine="true"/>
+
+                <TextView
+                    style="@style/MyTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="@dimen/profile_margin"
+                    android:text="@string/profile_instagram"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/profile_text_size"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorWhite"
+                android:paddingBottom="@dimen/profile_padding"
+                android:paddingTop="@dimen/profile_padding">
+
+                <EditText
+                    android:id="@+id/et_profile_oovoo"
+                    style="@style/MyStyleEditText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:imeOptions="actionNext"
+                    android:singleLine="true"/>
+
+                <TextView
+                    style="@style/MyTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="@dimen/profile_margin"
+                    android:text="@string/ooovoo"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/profile_text_size"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorWhite"
+                android:paddingBottom="@dimen/profile_padding"
+                android:paddingTop="@dimen/profile_padding">
+
+                <EditText
+                    android:id="@+id/et_profile_skype"
+                    style="@style/MyStyleEditText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:imeOptions="actionNext"
+                    android:singleLine="true"/>
+
+                <TextView
+                    style="@style/MyTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="@dimen/profile_margin"
+                    android:text="@string/skype"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/profile_text_size"/>
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorWhite"
+                android:paddingBottom="@dimen/profile_padding"
+                android:paddingTop="@dimen/profile_padding">
+
+                <EditText
+                    android:id="@+id/et_profile_viber"
+                    style="@style/MyStyleEditText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:imeOptions="actionNext"
+                    android:singleLine="true"/>
+
+                <TextView
+                    style="@style/MyTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="@dimen/profile_margin"
+                    android:text="@string/viber"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/profile_text_size"/>
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/background_toolbar"
+                android:paddingBottom="@dimen/profile_padding"
+                android:paddingLeft="@dimen/activity_vertical_margin"
+                android:paddingRight="@dimen/activity_vertical_margin"
+                android:paddingTop="@dimen/profile_padding_top_title"
+                android:text="@string/profile_title_who_see"
+                android:textAllCaps="true"
+                android:textStyle="bold"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorWhite"
+                android:padding="@dimen/profile_padding">
+
+                <Spinner
+                    android:id="@+id/spinner_who_see"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerVertical="true"
+                    android:gravity="right"/>
+
+                <TextView
+                    style="@style/MyTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="5dp"
+                    android:text="@string/everyone"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/profile_text_size"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorWhite">
+
+                <FrameLayout
+                    android:id="@+id/frame_profile_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/filter_height_age"
+                    android:layout_below="@+id/txt_age_range_profile1"
+                    android:layout_marginTop="@dimen/margin_editText_bottom"
+                    android:background="@color/background_toolbar">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/filter_padding_age"
+                        android:src="@drawable/custom_img_picker"/>
+
+                    <com.signatic.library.horizontalpicker.HorizontalPicker
+                        android:id="@+id/picker_age_range_profile1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
+                        android:marqueeRepeatLimit="2"
+                        android:paddingBottom="10dp"
+                        android:paddingTop="10dp"
+                        android:textColor="@drawable/custom_text_color_picker"
+                        android:textSize="@dimen/filter_text_size"
+                        app:dividerSize="@dimen/filter_divider"
+                        app:sideItems="@integer/numSideItemsAgeRange"
+                        app:values="@array/values_age"/>
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/filter_height_age"
+                    android:layout_below="@+id/frame_profile_1"
+                    android:layout_marginBottom="@dimen/margin_editText_bottom"
+                    android:layout_marginTop="@dimen/margin_editText_bottom"
+                    android:background="@color/background_toolbar">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/filter_padding_age"
+                        android:src="@drawable/custom_img_picker"/>
+
+                    <com.signatic.library.horizontalpicker.HorizontalPicker
+                        android:id="@+id/picker_age_range_profile2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
+                        android:marqueeRepeatLimit="2"
+                        android:paddingBottom="10dp"
+                        android:paddingTop="10dp"
+                        android:textColor="@drawable/custom_text_color_picker"
+                        android:textSize="@dimen/filter_text_size"
+                        app:dividerSize="@dimen/filter_divider"
+                        app:sideItems="@integer/numSideItemsAgeRange"
+                        app:values="@array/values_age"/>
+                </FrameLayout>
+
+                <TextView
+                    android:id="@+id/txt_age_range_profile1"
+                    style="@style/MyTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="16dp"
+                    android:text="@string/age_range"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/profile_text_size"/>
+            </RelativeLayout>
+
+            <TextView
+                style="@style/MyTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/background_toolbar"
+                android:paddingBottom="@dimen/profile_padding_toolbar"
+                android:paddingLeft="@dimen/activity_vertical_margin"
+                android:paddingRight="@dimen/activity_vertical_margin"
+                android:paddingTop="@dimen/profile_padding_top_title"
+                android:text="@string/profile_title_account"
+                android:textAllCaps="true"
+                android:textStyle="bold"/>
+
+            <RelativeLayout
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorWhite"
+                android:paddingBottom="@dimen/profile_padding"
+                android:paddingTop="@dimen/profile_padding">
+
+                <TextView
+                    android:id="@+id/txt_notify_profile"
+                    style="@style/MyTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="@dimen/profile_margin"
+                    android:text="Notifications"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/profile_text_size"/>
+
+
+                <com.rey.material.widget.Switch
+                    android:id="@+id/switch_notify_profile"
+                    style="@style/Material.Widget.Switch"
+                    android:layout_width="64dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:checked="false"
+                    android:gravity="center"
+                    android:paddingRight="@dimen/profile_margin"
+                    android:switchMinWidth="56dp"
+                    app:rd_enable="false"/>
+            </RelativeLayout>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_profile_setting"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorWhite"
+                android:paddingBottom="@dimen/profile_padding"
+                android:paddingLeft="@dimen/profile_padding"
+                android:paddingRight="5dp"
+                android:paddingTop="@dimen/profile_padding">
+            </android.support.v7.widget.RecyclerView>
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+</android.support.design.widget.CoordinatorLayout>

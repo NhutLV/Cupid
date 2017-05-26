@@ -1,0 +1,271 @@
+<resources>
+    <string name="app_name">Cupid</string>
+    <string name="title_nav_header">Danh mục</string>
+    <string name="info_nav_header">Allison McCoy</string>
+    <string name="facebook_app_id">1683493518633929</string>
+    <string name="navigation_drawer_open">Mở navigation drawer</string>
+    <string name="navigation_drawer_close">Đóng navigation drawer</string>
+    <string name="user">****Loi Nguyen****</string>
+    <string name="action_settings">Cài đặt</string>
+    <string name="action_logout">Đăng xuất</string>
+    <string name="introduce">In other words, it is a answer to a question of some kid. It is also that from with data ...</string>
+    <string name="sign_up_bottom">Or if you\'d like to work as a guide then sign up here</string>
+    <string name="enjoyday">Enjoy 7 days of free VIP</string>
+    <string name="enjoydaycontent">We\'re excited to offer you all our VIP features at no cost for 7 days.</string>
+    <string name="enjoydaylimit">or continued with limited version</string>
+    <string name="saybyelimited">Say Bye to limits...Become a VIP!</string>
+    <string name="saybyelimited1">All Popular users unlocked</string>
+    <string name="saybyelimited2">Become a Verified Profile</string>
+    <string name="saybyelimited3">All user that like you unlocked</string>
+    <string name="saybyelimited4">All profile visitors unlocked</string>
+    <string name="saybyelimited5">Increased profile visibility</string>
+    <string name="saybyelimited6">Remove all ads</string>
+    <string name="username">Tên người dùng</string>
+    <string name="password">Mật khẩu</string>
+    <string name="hint_sign_up_username">Tên người dùng</string>
+    <string name="hint_sign_up_email">Email</string>
+    <string name="hint_sign_up_password">Mật khẩu</string>
+    <string name="hint_sign_up_age">Tuổi</string>
+    <string name="hint_sign_up_country">Quốc gia</string>
+    <string name="email">Email</string>
+    <string name="age">Tuổi</string>
+    <string name="enter">Nhập</string>
+    <string name="button_login">Đăng nhập</string>
+    <string name="country">Quốc gia</string>
+    <string name="start">Bắt đầu</string>
+    <string name="next">Tiếp</string>
+    <string name="skip">Bỏ qua</string>
+    <string name="createanaccount">Tạo tài khoản</string>
+    <string name="resetpassword">Khôi phục mật khẩu ?</string>
+    <string name="login">Đăng nhập</string>
+    <string name="signupnow">Đăng ký ngay</string>
+    <string name="infosignup">And Book Your S<![CDATA[<font color=#17A1CA>tour</font>]]>yz experience today.It only take minutes</string>
+    <string name="infosignupbottom">Or if you\'d like to work as a <![CDATA[<font color=#17A1CA>guide</font>]]> then sign up here</string>
+    <string name="back">Trở về</string>
+    <string name="choicecard">Chọn loại thẻ</string>
+    <string name="choicebank">Chọn ngân hàng</string>
+    <string name="hintidcard">Mã thẻ</string>
+
+    <string-array name="values_age">
+
+        <item>16</item>
+        <item>17</item>
+        <item>18</item>
+        <item>19</item>
+        <item>20</item>
+        <item>21</item>
+        <item>22</item>
+        <item>23</item>
+        <item>24</item>
+        <item>25</item>
+        <item>26</item>
+        <item>27</item>
+        <item>28</item>
+        <item>29</item>
+        <item>30</item>
+        <item>31</item>
+        <item>32</item>
+        <item>33</item>
+        <item>34</item>
+        <item>35</item>
+    </string-array>
+
+    <string-array name="gender">
+
+        <item>Nam</item>
+        <item>Nữ</item>
+        <item>Gay</item>
+        <item>Les</item>
+
+    </string-array>
+
+
+    <string-array name="who_see">
+
+        <item>Mọi người</item>
+        <item>Nữ</item>
+        <item>Nam</item>
+
+    </string-array>
+
+
+    <string-array name="interested">
+
+        <item>Mọi người</item>
+        <item>Nữ</item>
+        <item>Nam</item>
+        <item>Les</item>
+        <item>Gay</item>
+
+    </string-array>
+
+
+    <string-array name="i_am_here_to">
+        <item>Không trả lời</item>
+        <item>Giao lưu kết bạn</item>
+        <item>Trò chuyện</item>
+        <item>Hẹn hò</item>
+    </string-array>
+
+    <string-array name="drinking">
+        <item>Không trả lời</item>
+        <item>Không</item>
+        <item>Dự ứng</item>
+        <item>Có</item>
+        <item>Đi với công ty</item>
+    </string-array>
+
+    <string-array name="smoking">
+        <item>Không trả lời</item>
+        <item>Không</item>
+        <item>Dị ứng</item>
+        <item>Có</item>
+    </string-array>
+
+    <string-array name="relationship">
+        <item>Không trả lời</item>
+        <item>Một mình</item>
+        <item>Taken</item>
+        <item>Open</item>
+    </string-array>
+
+
+    <string-array name="living">
+        <item>Không trả lời</item>
+        <item>Ở với gia đình</item>
+        <item>Ở nhà riêng</item>
+        <item>Ở ký túc xá</item>
+        <item>Ở với bạn</item>
+        <item>Ở một mình</item>
+    </string-array>
+
+    <string-array name="kids">
+        <item>No Answer</item>
+        <item>No, Never</item>
+        <item>Someday</item>
+        <item>Already Have</item>
+    </string-array>
+
+
+    <string-array name="education">
+        <item>Không trả lời</item>
+        <item>Cấp 3</item>
+        <item>Cao đẳng/Đại học</item>
+        <item>Cao học</item>
+    </string-array>
+
+    <string-array name="card">
+        <item>Kim bao</item>
+        <item>Ngan Luong</item>
+        <item>Paypal</item>
+    </string-array>
+
+    <!--navigation view-->
+    <string name="item_nav_interest">Sở thích</string>
+    <string name="item_nav_filter">Bộ lọc</string>
+    <string name="item_nav_meet">Người quen</string>
+    <string name="item_nav_chat">Trò chuyện</string>
+    <string name="item_nav_profiles">Hồ sơ khách</string>
+    <string name="item_nav_who_like">Ai thích tôi</string>
+    <string name="nav_notification">Thông báo</string>
+    <string name="nav_remove_ads">Bỏ ADS</string>
+    <!---->
+    <!--chat-->
+    <string name="header_text_chat">Tải tin nhắn trước đó</string>
+    <string name="toolbar_text_chat">JSQMessages</string>
+    <!---->
+    <!-- profile settings-->
+
+    <string name="profile_title_basic">Thông tin cơ bản</string>
+    <string name="profile_title_who_see">Ai có thể thấy tôi ?</string>
+    <string name="profile_title_account">Tài khoản</string>
+
+    <string name="profile_photo">Hình ảnh</string>
+    <string name="profile_snapchat">Snapchat</string>
+    <string name="profile_kik">Kik</string>
+    <string name="profile_instagram">Instagram</string>
+    <string name="profile_bio">Bio</string>
+    <string name="profile_gender">Giới tính</string>
+    <string name="profile_age">Tuổi</string>
+    <string name="profile_interested">Sở thích</string>
+    <string name="profile_display_name">Tên hiển thị</string>
+    <string name="profile_tags">Tags</string>
+
+    <!---->
+
+    <!-- profile settings-->
+
+    <string name="filter_title_show_me">Thông tin</string>
+    <string name="filter_title_age">Độ tuổi</string>
+    <string name="filter_title_show_user_have">Người dùng</string>
+    <string name="filter_title_show_user_profiles">Người dùng không hồ sơ cá nhân</string>
+
+    <!---->
+
+    <!--Choice Packed Coin-->
+    <string name="title_toolbar_choice_packed_coin">Get Coins</string>
+    <string name="packed_buy_coin">BUY COINS PACKAGES</string>
+    <string name="packed_mega_coin">BUY MEGA COIN PACKAGES</string>
+    <string name="packed_free_coin">FREE COINS</string>
+    <string name="earn_free_coin">Earn Free Coins</string>
+    <!---->
+
+    <string name="sign_up">Đăng ký</string>
+
+    <string name="err_msg_name">Nhập họ và tên</string>
+    <string name="err_msg_email">Nhập đúng email</string>
+    <string name="err_msg_password">Nhập mật khẩu</string>
+
+    <string name="confirm_text">By clicking "Sing up" you confirm you are 18+ and accept our Terms and Privacy Policy</string>
+    <string name="content_detail">In other words, it is the answer to a question of some kind...</string>
+
+    <string name="sign_up_gender">Giới tính</string>
+    <string name="sign_up_female">Nam</string>
+    <string name="sign_up_male">Nữ</string>
+
+    <string name="profile_setting_text">Cài đặt profile</string>
+    <string name="profile_setting_tag">Thông tin</string>
+
+    <string name="status_current">Nếu bạn muốn có khỏi đầu mới, hãy gởi tin nhắn cho tôi :))</string>
+
+    <!--invite friend-->
+    <string name="title_invite">Bạn bè</string>
+    <string name="search_friend">Tìm kiếm</string>
+    <string name="friend_offline">BẠN BÈ OFFLINE</string>
+    <string name="friend_request">BẠN BÈ YÊ CẦU</string>
+    <string name="edit">Sửa</string>
+    <string name="contract">Hợp đồng</string>
+    <!--end invite friend-->
+
+    <string name="check_connect">Không có kết nối mạng</string>
+
+    <string name="cancel">Hủy</string>
+    <string name="i_am_here_to">Mong muốn</string>
+    <string name="relationship">Mối quan hệ</string>
+    <string name="drinking">Bia rượu</string>
+    <string name="smoking">Thuốc lá</string>
+    <string name="living">Tình trạng </string>
+    <string name="kids">Kids</string>
+    <string name="education">trình độ</string>
+    <string name="job">Công việc</string>
+    <string name="company">Công ty</string>
+    <string name="contact">Liên hệ</string>
+    <string name="ooovoo">Oovoo</string>
+    <string name="skype">Skype</string>
+    <string name="viber">Viber</string>
+    <string name="everyone">Mọi người</string>
+    <string name="age_range">Trong độ tuổi</string>
+
+    <string name="earn_coins">Earn Coins</string>
+    <string name="vip_upgrade">Vip Upgrade</string>
+    <string name="share_add_me">Share AddMe</string>
+    <string name="term_of_use">Term of Use</string>
+    <string name="privacy_policy">Privacy Policy</string>
+    <string name="support">Hỗ trọư</string>
+    <string name="restore_purchases">Restore Purchases</string>
+    <string name="del_account">Xóa tài khoản</string>
+
+    <string name="message_no_save_profile">Thông tin không được lưu</string>
+    <string name="save">Lưu</string>
+
+</resources>

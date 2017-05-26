@@ -1,0 +1,17 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/sendphoto"
+        android:title="Send PhoTo"/>
+
+    <item
+        android:id="@+id/sendvideo"
+        android:title="Send Video"/>
+
+    <item
+        android:id="@+id/sendface"
+        android:title="Send FaceBook"/>
+    <item
+        android:id="@+id/sendinstal"
+        android:title="Send Instargram"/>
+</menu>

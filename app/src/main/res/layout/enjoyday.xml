@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="10dp"
+    >
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorEnjoyHeader">
+
+        <!--<ImageView
+            android:id="@+id/close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_close"
+            android:backgroundTint="#FFFFFF"/>-->
+        <TextView
+            android:id="@+id/close"
+            android:layout_width="wrap_content"
+            android:text="Close"
+            android:textSize="18sp"
+            android:textColor="@color/colorWhite"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Free Vip Upggrade"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:textColor="@color/colorWhite"/>
+
+    </android.support.v7.widget.Toolbar>
+    <RelativeLayout
+        android:id="@+id/showimage"
+        android:layout_below="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+     <!-- <com.ogaclejapan.arclayout.ArcLayout
+            android:layout_width="match_parent"
+            app:arc_origin="top"
+            app:arc_color="#0000FF"
+            android:id="@+id/mau"
+            app:arc_radius="200dp"
+            app:arc_axisRadius="300dp"
+            app:arc_freeAngle="false"
+            app:arc_reverseAngle="false"
+            android:layout_height="80dp"/>-->
+     <!--</AbsoluteLayout>&ndash;&gt;
+        <AbsoluteLayout
+            android:layout_width="match_parent"
+            android:id="@+id/mau"
+            android:layout_height="wrap_content">-->
+        <LinearLayout
+            android:id="@+id/tren"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@color/colorEnjoyHeader"></LinearLayout>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:id="@+id/mau"
+            android:layout_below="@+id/tren"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="-20dp"
+            android:background="@drawable/demo"></LinearLayout>
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/avatar"
+            android:layout_below="@+id/mau"
+            android:layout_width="128dp"
+            android:layout_height="128dp"
+            app:civ_border_width="3dp"
+            app:civ_border_color="#FFFFFF"
+            android:src="@drawable/image"
+            android:layout_marginTop="-64dp"
+            android:layout_centerHorizontal="true"/>
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/logo"
+            android:layout_below="@+id/avatar"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            app:civ_border_width="3dp"
+            app:civ_border_color="#FFFFFF"
+            android:src="@drawable/becomepro"
+            android:layout_marginTop="-16dp"
+            android:layout_centerHorizontal="true"
+            ></de.hdodenhof.circleimageview.CircleImageView>
+    </RelativeLayout>
+    <LinearLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/showimage"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="10"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="2.0"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="7"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/enjoy_day"
+                android:textColor="#000000"
+                android:textSize="22sp"
+                android:textStyle="bold"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_below="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/enjoy_margin_top_limit_text"
+        android:paddingBottom="10dp"
+        android:background="#F1F0F6"
+        android:orientation="vertical">
+
+       <!-- <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingTop="20dp"
+            android:text="@string/say_bye_limited"
+            android:textColor="#000000"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            />-->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginLeft="20dp"
+            >
+                <ImageView
+                    android:id="@+id/checkuserunlock"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:adjustViewBounds="true"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/accress">
+                </ImageView>
+                 <LinearLayout
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:orientation="vertical">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:gravity="center_vertical"
+                            android:text="Access all Popular People "
+                            android:textColor="#000000"
+                            android:textSize="18sp"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:gravity="center_vertical"
+                            android:textSize="16sp"
+                            android:text="Unlock the most popular people"
+                            android:textColor="#000000"/>
+                 </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginLeft="20dp"
+          >
+                <ImageView
+                    android:id="@+id/checkverified"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:src="@drawable/viewall"
+                    android:adjustViewBounds="true"
+                    android:scaleType="centerCrop"
+                    >
+                </ImageView>
+            <LinearLayout
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center_vertical"
+                    android:text="Increase Profile Visible"
+                    android:textColor="#000000"
+                    android:textSize="18sp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center_vertical"
+                    android:textSize="16sp"
+                    android:text="Get the maximum number of view and adds"
+                    android:textColor="#000000"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginLeft="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="10dp"
+            >
+                <ImageView
+                    android:id="@+id/checkuerlike"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:src="@drawable/see"
+                    >
+                </ImageView>
+
+            <LinearLayout
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center_vertical"
+                    android:text="See Who like and viewed you"
+                    android:textColor="#000000"
+                    android:textSize="18sp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center_vertical"
+                    android:textSize="16sp"
+                    android:text="Find out everyone that's checking you out"
+                    android:textColor="#000000"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginLeft="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="15dp"
+           >
+                <ImageView
+                    android:id="@+id/checkrofilevisitor"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:src="@drawable/becomepro"
+                    >
+                </ImageView>
+
+            <LinearLayout
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center_vertical"
+                    android:text="Become Verified profile"
+                    android:textColor="#000000"
+                    android:textSize="18sp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center_vertical"
+                    android:textSize="16sp"
+                    android:text="Stand out from the crow with a crow"
+                    android:textColor="#000000"/>
+            </LinearLayout>
+        </LinearLayout>
+        <Button
+            android:id="@+id/getstart"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border_button_enjoy"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:text="Get Started!"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:textStyle="normal"/>
+
+        <Button
+            android:id="@+id/limit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border_button_enjoy"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:backgroundTint="@color/background_limit_button"
+            android:text="@string/enjoy_day_limit"
+            android:textAllCaps="false"
+            android:textColor="@color/text_limit_button"
+            android:textSize="16sp"/>
+    </LinearLayout>
+</RelativeLayout>
+</ScrollView>

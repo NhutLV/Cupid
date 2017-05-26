@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/background_choice_packed_coin"
+        android:orientation="vertical"
+        >
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/background_toolbar_choice">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="20"
+                >
+
+                <Button
+                    android:id="@+id/close"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:drawableLeft="@drawable/ic_back"
+                    android:background="@android:color/transparent"
+                    />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="10"
+                    android:gravity="center"
+                    android:text="@string/title_toolbar_choice_packed_coin"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="18sp"/>
+
+                <TextView
+                    android:id="@+id/my_coins"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="5"
+                    android:gravity="center"
+                    android:textStyle="normal"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="22sp"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:drawableLeft="@drawable/ic_coin"
+                   />
+            </LinearLayout>
+        </android.support.v7.widget.Toolbar>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="12dp"
+            android:paddingLeft="20dp"
+            android:paddingTop="20dp"
+            android:textSize="16sp"
+            android:text="@string/packed_buy_coin"
+            android:textStyle="bold">
+
+        </TextView>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rc_coin_packed"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        </android.support.v7.widget.RecyclerView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="10dp"
+            android:paddingLeft="19dp"
+            android:paddingTop="30dp"
+            android:textSize="16sp"
+            android:text="@string/packed_mega_coin"
+            android:textStyle="bold">
+        </TextView>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rc_mega_packed"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </android.support.v7.widget.RecyclerView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="10dp"
+            android:paddingLeft="19dp"
+            android:paddingTop="48dp"
+            android:textSize="16sp"
+            android:text="@string/packed_free_coin"
+            android:textStyle="bold"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorWhite"
+            android:orientation="horizontal"
+            android:weightSum="8">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="7"
+                android:textSize="16sp"
+                android:textColor="@color/number_coin_text"
+                android:paddingBottom="20dp"
+                android:paddingLeft="20dp"
+                android:paddingTop="20dp"
+                android:text="@string/earn_free_coin"/>
+
+            <ImageView
+                android:id="@+id/freecoin"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/profile_size_button"
+                android:layout_gravity="center"
+                android:layout_weight="0.5"
+                android:background="@drawable/ic_navigate_next_black"
+                />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

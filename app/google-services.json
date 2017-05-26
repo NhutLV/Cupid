@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "42414657657",
+    "firebase_url": "https://chat-bf3d1.firebaseio.com",
+    "project_id": "chat-bf3d1",
+    "storage_bucket": "chat-bf3d1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:42414657657:android:bcbc27420ee54f48",
+        "android_client_info": {
+          "package_name": "com.signatic.cupid"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "42414657657-n2f4kh2c8rc7cbot7ql62jvk4o0qqrrc.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.signatic.cupid",
+            "certificate_hash": "803FB005CCD3FDE8EC02532B9BEBEC36F1B1D2F4"
+          }
+        },
+        {
+          "client_id": "42414657657-karf986pcrfdahoaikir5ad6apnjnog4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBnAvYniHUG8JF6IBFXC8VqodAD-m_t8sc"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "42414657657-karf986pcrfdahoaikir5ad6apnjnog4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

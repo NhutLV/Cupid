@@ -1,0 +1,124 @@
+<resources xmlns:android="http://schemas.android.com/tools">
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:listDivider">
+            @drawable/custom_item_nav
+        </item>
+
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="ThemeToolbar" parent="Theme.AppCompat.Light">
+
+        <!-- navigation icon color -->
+        <item name="colorControlNormal">@color/navigation_menu</item>
+    </style>
+
+    <style name="TextAppearence.App.TextInputLayout"
+        parent="@android:style/TextAppearance">
+    <item name="android:textColor">@color/inputlayout</item>
+    </style>
+
+    <style name="Theme.App.Base" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorControlNormal">
+            @color/colorWhite
+        </item>
+        <item name="colorControlActivated">@color/color_app</item>
+        <item name="colorControlHighlight">#ffffff</item>
+    </style>
+
+    <style name="Theme.App.Base.loginNew" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorControlNormal">
+            @color/color_line_editText_login
+        </item>
+        <item name="colorControlActivated">@color/color_app</item>
+        <item name="colorControlHighlight">@color/color_line_editText_login</item>
+    </style>
+
+    <style name="yourstyle" parent="Base.TextAppearance.AppCompat">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:background">@color/colorinputlayout</item>
+    </style>
+    <style
+        name="MyPopupMenu" parent="Widget.AppCompat.PopupMenu">
+        <item name="android:background">@android:color/transparent</item>
+        <item
+            name="android:itemBackground">@drawable/popup_color_drawable</item>
+    </style>
+
+    <style name="MyButton" parent="Theme.AppCompat.Light">
+        <item name="colorControlHighlight">@color/colorPrimary</item>
+    </style>
+
+    <style name="NavigationTheme" parent="AppTheme">
+        <item name="android:textSize">18sp</item>
+        <item name="android:layout_marginBottom">02dp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="LineBottomRecycleviewTheme" parent="AppTheme">
+        <item name="android:textSize">18sp</item>
+        <item name="android:layout_marginBottom">02dp</item>
+        <item name="android:layout_marginTop">02dp</item>
+        <item name="android:textStyle">bold</item>
+
+    </style>
+
+    <style name="RadioButton">
+        <item name="android:textColor">@drawable/button_text_color</item>
+        <item name="android:minHeight">33dp</item>
+        <item name="android:minWidth">70dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:button">@null</item>
+        <item name="android:paddingLeft">5dp</item>
+        <item name="android:paddingRight">5dp</item>
+    </style>
+
+    <style name="MineCustomTabText" parent="@android:style/TextAppearance.Widget.TabWidget">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="spinnerItemStyle" parent="android:Widget.TextView.SpinnerItem">
+
+    </style>
+
+    <style name="spinnerDropDownItemStyle" parent="android:TextAppearance.Widget.TextView.SpinnerItem">
+
+    </style>
+
+    <style name="Fullscreen" parent="@android:style/Theme.NoTitleBar.Fullscreen">
+        <item name="android:background">#ffffff</item>
+    </style>
+
+    <!--style edit text profile-->
+
+    <style name="MyStyleEditText" parent="@android:style/Widget.EditText">
+        <item name="android:paddingRight">@dimen/profile_margin</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:layout_alignParentTop">true</item>
+        <item name="android:layout_alignParentRight">true</item>
+        <item name="android:gravity">right</item>
+        <item name="android:fontFamily">sans-serif-light-condensed</item>
+    </style>
+
+    <!--end-->
+
+    <style name="MyTextView">
+        <item name="android:fontFamily">sans-serif-light-condensed</item>
+    </style>
+</resources>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:id="@+id/grp1" android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_interested"
+            android:icon="@drawable/ico_top_rated"
+            android:title="Interested"
+            />
+    </group>
+    <group android:id="@+id/grp2" android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_filter_vc"
+            android:icon="@drawable/icobrowseflaunts"
+            android:title="@string/item_nav_filter" />
+     </group>
+     <group android:id="@+id/grp3" android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_meet"
+            android:icon="@drawable/icofindapro"
+            android:title="@string/item_nav_meet" />
+    </group>
+    <group android:id="@+id/grp4" android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_chat"
+            android:icon="@drawable/icochat"
+            android:title="@string/item_nav_chat" />
+    </group>
+    <group android:id="@+id/grp5" android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_profiles"
+            android:icon="@drawable/ico_my_stats"
+            android:title="Profiles Visitor" />
+    </group>
+    <group android:id="@+id/grp6" android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_who_like"
+            android:icon="@drawable/ico_who_liked_me"
+            android:title="Who Like Me" />
+    </group>
+    <group android:id="@+id/grp7" android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_notification"
+            android:icon="@drawable/ico_notificaiton"
+            android:title="Remove Ads" />
+
+    </group>
+    <group android:id="@+id/grp8" android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_logout"
+            android:icon="@drawable/ico_remove_ads"
+            android:title="Logout"/>
+    </group>
+</menu>

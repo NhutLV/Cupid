@@ -1,0 +1,35 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/namejob"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:text="Jobs"
+        android:textColor="@color/title_chat"
+        android:textSize="22sp"
+        />
+
+    <TextView
+        android:id="@+id/message_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/namejob"
+        android:layout_margin="5dp"
+        android:background="@drawable/out_message_bg"
+        android:shadowDx="1"
+        android:shadowDy="1"
+        android:textColor="@color/colorWhite"
+        android:textSize="20sp"/>
+     <ImageView
+         android:id="@+id/sendimage"
+         android:maxWidth="250dp"
+         android:layout_below="@+id/namejob"
+         android:adjustViewBounds="true"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_margin="5dp"/>
+</RelativeLayout>

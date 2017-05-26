@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/menu_upload"
+        android:title="@string/popmenu_avatar_upload">
+    </item>
+    <item android:id="@+id/menu_update"
+          android:title="@string/popmenu_avatar_edit">
+    </item>
+    <item android:id="@+id/menu_delete"
+          android:title="@string/popmenu_avatar_delete">
+    </item>
+</menu>
